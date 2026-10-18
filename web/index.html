@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="AQS AutoBOQ quantity surveying and measurement platform.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="AQS">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>AQS AutoBOQ</title>
+  <style>
+    /* Keep horizontal table-edge gestures inside the app instead of triggering
+       browser Back/Forward. Do not block wheel events or vertical scrolling. */
+    html, body {
+      overscroll-behavior-x: none;
+    }
+  </style>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDcQRu_JXgSBCmj0Q2tQy2N8UKD-2wWOiw",
+    authDomain: "aqssite-6aa5c.firebaseapp.com",
+    projectId: "aqssite-6aa5c",
+    storageBucket: "aqssite-6aa5c.firebasestorage.app",
+    messagingSenderId: "647532668318",
+    appId: "1:647532668318:web:328179a1d953062efc228f"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+<script type="module">
+  import * as pdfjsLib from "https://unpkg.com/pdfjs-dist@4.6.82/build/pdf.min.mjs";
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://unpkg.com/pdfjs-dist@4.6.82/build/pdf.worker.min.mjs";
+
+  // expose for Dart interop if you want
+  window.pdfjsLib = pdfjsLib;
+</script>
+<!-- <script type="module" async>
+  import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs';
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs';
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.min.js"></script>
+<script>
+  // pdf.js worker
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.worker.min.js";
+</script> -->
+
+<script src="pdf_thumb.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@6.0.1/dist/tesseract.min.js"></script>
+<script src="rebar_ocr.js"></script>
+
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <script src='https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.min.mjs' type='module'></script>
+  <script type='module'>
+  var { pdfjsLib } = globalThis;
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.worker.mjs';
+
+  var pdfRenderOptions = {
+    cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/cmaps/',
+    cMapPacked: true,
+  }
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "aqssite-6aa5c",
+          "appId": "1:647532668318:android:4c5e4710d7789f7ffc228f",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "aqssite-6aa5c",
+          "appId": "1:647532668318:ios:3fe8ee0985d9ce0dfc228f",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "aqssite-6aa5c",
+          "configurations": {
+            "android": "1:647532668318:android:4c5e4710d7789f7ffc228f",
+            "ios": "1:647532668318:ios:3fe8ee0985d9ce0dfc228f",
+            "macos": "1:647532668318:ios:3fe8ee0985d9ce0dfc228f",
+            "web": "1:647532668318:web:328179a1d953062efc228f",
+            "windows": "1:647532668318:web:e363ec35f9ba5bedfc228f"
+          }
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "aqssite-6aa5c",
+          "appId": "1:647532668318:ios:3fe8ee0985d9ce0dfc228f",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    }
+  ],
+ "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/index.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/flutter_bootstrap.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/main.dart.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/flutter_service_worker.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/assets/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, must-revalidate"
+          }
+        ]
+      }
+    ]
+  },
+   "emulators": {
+    "functions": {
+      "port": 5002
+    },
+    "firestore": {
+      "port": 8081
+    },
+    "ui": {
+      "enabled": true,
+      "port": 4002
+    }
+  }
+}

@@ -1,0 +1,118 @@
+// lib/features/pricing/data/pricing_plans.dart
+
+import 'package:aqs/features/pricing/models/pricing_plan.dart';
+
+// import '../models/pricing_plan.dart';
+
+const pricingPlans = <PricingPlan>[
+  PricingPlan(
+    id: 'free',
+    name: 'Free',
+    monthlyProductCode: null,
+    yearlyProductCode: null,
+    monthlyPrice: 0,
+    yearlyPrice: 0,
+    description: 'Free forever for first-time users learning AQS AUTOboq.',
+    badge: 'Free forever',
+    projects: '1 active project',
+    drawings: 'A3 drawing resolution',
+    users: '1 user',
+    buildUpRates: '3 build-up rates',
+    highlight: false,
+    features: [
+      'Foundation wall measuring tool',
+      'Walling measuring tool (150 mm / 230 mm)',
+      'Area measuring tool',
+      'A3 standard drawing resolution',
+      'Use up to 3 AQS BOQ templates',
+      'Create unlimited personal BOQ templates',
+      '3 saved build-up rates',
+      'Other tools visible but locked',
+    ],
+  ),
+
+  PricingPlan(
+    id: 'basic',
+    name: 'Basic',
+    monthlyProductCode: 'AQS_BASIC_MONTHLY',
+    yearlyProductCode: 'AQS_BASIC_YEARLY',
+    monthlyPrice: 25000,
+    yearlyPrice: 250000,
+    description:
+        'For individual users and small projects that need essential take-off and BOQ tools.',
+    badge: 'Essential',
+    projects: '2 active projects',
+    drawings: '10 drawings / month • up to A2',
+    users: '1 user',
+    buildUpRates: '10 build-up rates',
+    highlight: false,
+    features: [
+      'Basic drawing take-off',
+      'BOQ import and export',
+      'Project dashboard',
+      'Client directory',
+      'Standard measurement tools',
+      'Drawing resolution up to A2',
+      'Use up to 10 AQS BOQ templates',
+      'Create unlimited personal BOQ templates',
+      'Up to 10 saved build-up rates',
+    ],
+  ),
+
+  PricingPlan(
+    id: 'pro',
+    name: 'Pro',
+    monthlyProductCode: 'AQS_PRO_MONTHLY',
+    yearlyProductCode: 'AQS_PRO_YEARLY',
+    monthlyPrice: 75000,
+    yearlyPrice: 750000,
+    description:
+        'For quantity surveyors and estimators doing regular professional project work.',
+    badge: 'Most popular',
+    projects: '25 active projects',
+    drawings: '200 drawings / month • up to A1',
+    users: '3 users',
+    buildUpRates: '25 build-up rates',
+    highlight: true,
+    features: [
+      'Everything in Basic',
+      'All measurement tools',
+      'BOQ bills summary',
+      'Excel and PDF outputs',
+      'High-resolution drawing uploads up to A1',
+      'Use up to 50 AQS BOQ templates',
+      'Create unlimited personal BOQ templates',
+      'Up to 25 saved build-up rates',
+      'Priority support',
+    ],
+  ),
+
+  PricingPlan(
+    id: 'business',
+    name: 'Business',
+    monthlyProductCode: 'AQS_BUSINESS_MONTHLY',
+    yearlyProductCode: 'AQS_BUSINESS_YEARLY',
+    monthlyPrice: 200000,
+    yearlyPrice: 2000000,
+    description:
+        'For QS firms, contractors, consultants, and collaborative estimating teams.',
+    badge: 'Team workspace',
+    projects: '100 active projects',
+    drawings: '1,000 drawings / month • up to A0',
+    users: '5 users included',
+    buildUpRates: 'Unlimited build-up rates',
+    highlight: false,
+    features: [
+      'Everything in Pro',
+      'Team members and roles',
+      'Shared project workspaces',
+      'Audit trail',
+      'Maximum drawing resolution up to A0',
+      'Organisation management',
+      'Use up to 100 AQS BOQ templates',
+      'Create unlimited personal BOQ templates',
+      'Unlimited build-up rates',
+      'Extra users available',
+    ],
+  ),
+];
